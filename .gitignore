@@ -1,0 +1,25 @@
+# Personal credentials — never commit these
+.env
+
+# Persistent browser session — contains login cookies
+kbase_user_session/
+
+# Upload tracking log — user-specific
+uploaded_samples.log
+
+# Error screenshots produced by the script
+logs/
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# OS files
+.DS_Store
+Thumbs.db

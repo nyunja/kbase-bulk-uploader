@@ -1,0 +1,17 @@
+# KBase Uploader Example Data
+# ===========================
+# This file shows the expected CSV format for the kbase_uploader.py script.
+#
+# Required columns (default names, overridable via CLI):
+#   --acc-col    : Unique sample/accession ID used for deduplication (default: ena_run_acc)
+#   --url-col    : Forward / primary FTP or HTTP URL                 (default: ftp_link_1)
+#
+# Optional columns:
+#   --url-col-2  : Reverse / secondary URL for paired-end reads      (default: ftp_link_2)
+#                  Leave empty or omit the column for single-end reads.
+#   country, city: Used for human-readable progress messages only.
+
+sample_id,country,city,ftp_link_1,ftp_link_2
+SAMPLE_001,Kenya,Nairobi,ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR260/001/ERR2607401/ERR2607401_1.fastq.gz,ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR260/001/ERR2607401/ERR2607401_2.fastq.gz
+SAMPLE_002,Nigeria,Lagos,ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR260/008/ERR2607398/ERR2607398_1.fastq.gz,ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR260/008/ERR2607398/ERR2607398_2.fastq.gz
+SAMPLE_003,Ghana,Accra,ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR260/009/ERR2607399/ERR2607399_1.fastq.gz,
