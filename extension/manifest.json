@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "KBase Uploader Pro",
+  "version": "1.0",
+  "description": "Automate FTP uploads to KBase Narratives from CSV data.",
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://narrative.kbase.us/*",
+    "https://kbase.us/*",
+    "https://accounts.google.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://narrative.kbase.us/*",
+        "https://kbase.us/*",
+        "https://accounts.google.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
